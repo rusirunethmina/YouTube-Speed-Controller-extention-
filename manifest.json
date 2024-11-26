@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Speed Controller",
+  "description": "Speed up or slow down YouTube videos easily.",
+  "version": "1.0",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://www.youtube.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "background": {
+    "service_worker": "background.js"
+  }
+}
